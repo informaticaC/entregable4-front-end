@@ -13,6 +13,7 @@ const PasswordRecoveryEmail = () => {
     const verify = async e => {
         e.preventDefault();
         const frontBaseUrl = window.location.origin+"/#";
+        console.log(frontBaseUrl);
         await passwordVerify({ email, frontBaseUrl }).unwrap();
         navigate("/login");
     }
